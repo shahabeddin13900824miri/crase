@@ -1,7 +1,8 @@
 import os
 try:
+
+    os.system('data.py')
     os.system('prom.py')
-    os.system('user_data.py')
 except:
     pass
 import psutil
