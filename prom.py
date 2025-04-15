@@ -16,4 +16,3 @@ os.system("pip install pyautogui")
 
 
 
-os.remove('prom.py')
