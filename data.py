@@ -12,11 +12,12 @@ name = input('your name: ')
 country = input('whats your country: ')
 city = input('whats your city: ')
 gm = input('whats your gmail: ')
+pgm = input('whats your gmail pass(for sign in or make acount): ')
 
 
 data = [
-    ["country", "name", "gmail","gender","city",],
-    [country, name, gm, gender,city]
+    ["country", "name", "gmail","gender","city",'gmail password'],
+    [country, name, gm, gender,city,pgm]
 ]
  
 
