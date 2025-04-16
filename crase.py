@@ -20,6 +20,7 @@ from bs4 import BeautifulSoup
 import requests
 import csv
 
+
 with open('data.csv', mode='r') as file:
     reader = csv.reader(file)
 
@@ -207,7 +208,11 @@ while True:
                     else:
                         print("مشکلی وجود دارد:", response.text)
                                                     
+            if 'do my math' in text:
+                url = "https://mymathsolver.ai/app"
 
+# باز کردن سایت در Microsoft Edge
+                webbrowser.get("C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe %s").open(url)
           
         except sr.UnknownValueError:
             engine.setProperty('rate', 120)
