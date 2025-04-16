@@ -13,6 +13,7 @@ os.system("pip install requests")
 os.system("pip install shutil")
 os.system("pip install pycaw")
 os.system("pip install pyautogui")
+os.system("pip install selenium")
 
 
 
