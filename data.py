@@ -1,4 +1,4 @@
-import csv
+import csv , os
 
 
 
@@ -25,5 +25,5 @@ with open("data.csv", mode="w", newline="", encoding="utf-8") as file:
     writer = csv.writer(file)
     writer.writerows(data)
 
-
+os.remove('data.py')
 
