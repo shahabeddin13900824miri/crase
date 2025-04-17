@@ -24,9 +24,9 @@ import csv
 with open('data.csv', mode='r') as file:
     reader = csv.reader(file)
 
-    # خواندن یک رکورد خاص (مثلاً اولین رکورد)
+  
     for i, row in enumerate(reader):
-        if i == 1:  # انتخاب رکورد سوم (اعداد از ۰ شروع می‌شوند)
+        if i == 1:  
             country = row[0]
             name = row[1]
             gmail = row[2]
@@ -67,16 +67,16 @@ def text_calculator(expression):
 
 
 def close_app_by_name(process_name):
-    # جستجو در لیست فرآیندها
+
     for process in psutil.process_iter(['pid', 'name']):
-        if process_name.lower() in process.info['name'].lower():  # مطابقت با نام فرآیند
+        if process_name.lower() in process.info['name'].lower():  
             process_id = process.info['pid']
-            psutil.Process(process_id).terminate()  # پایان دادن به فرآیند
+            psutil.Process(process_id).terminate()  
             engine.say(f"{process_name} closed!")
             return
     engine.say(f"i didnt find{process_name} ")
 
-# باز کردن فایل CSV
+
 
 
 while True:
@@ -178,20 +178,20 @@ while True:
                     'password': psg
                 }
 
-                # ارسال درخواست
+           
                 response = requests.post('https://%s.com/login'%(text), data=data)
                 
 
-                # بررسی پاسخ
+        
                 if response.ok:
                     engine.say("i did it")
                 else:
                     engine.say("i couldnt beacuse: ", response.text)
             if 'make acount on' in text:
-                # باز کردن فایل CSV
+           
                     text = text.replace('make acount on','')
 
-                    # اطلاعات حساب جدید
+          
                     data = {
                         'username': gmail,
                         'email': gmail,
@@ -199,10 +199,10 @@ while True:
                         'confirm_password': psg
                     }
 
-                    # ارسال درخواست به URL مربوط به ثبت‌نام
+                 
                     response = requests.post('https://%s.com/signup'%(text), data=data)
 
-                    # بررسی پاسخ
+           
                     if response.status_code == 200:
                         print("اکانت با موفقیت ساخته شد!")
                     else:
@@ -211,7 +211,7 @@ while True:
             if 'do my math' in text:
                 url = "https://mymathsolver.ai/app"
 
-# باز کردن سایت در Microsoft Edge
+
                 webbrowser.get("C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe %s").open(url)
           
         except sr.UnknownValueError:
