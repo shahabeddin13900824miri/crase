@@ -53,4 +53,4 @@ except:
     os.system("pip install selenium")
 
 
-
+os.remove('prom.py')
