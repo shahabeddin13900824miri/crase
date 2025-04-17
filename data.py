@@ -16,7 +16,7 @@ pgm = input('whats your gmail pass(for sign in or make acount): ')
 
 
 data = [
-    ["country", "name", "gmail","gender","city",'gmail password'],
+    ["country", "name", "gmail","gender","city",'gmail pass'],
     [country, name, gm, gender,city,pgm]
 ]
  
